@@ -17,6 +17,7 @@
     font-weight: bold;
     -webkit-box-reflect: below -10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
     text-shadow: 10px 10px 100px rgb(49, 117, 129);
+    text-align: center;
 }
 body{
     display: grid;
