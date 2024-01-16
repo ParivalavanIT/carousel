@@ -37,12 +37,13 @@ body{
 }
 @keyframes animate {
     0%{
-        transform:perspective(1000px)rotateY(0deg);
+        transform:perspective(2000px)rotateY(0deg);
     }
     100%{
-        transform:perspective(1000px)rotateY(360deg);
+        transform:perspective(2000px)rotateY(360deg);
     }
 }
+
 .box span{
     position: absolute;
     height: 80%;
@@ -50,10 +51,15 @@ body{
     transform-origin: center;
     transform-style: preserve-3d;
     transform:rotateY(calc(var(--i)*45deg))translateZ(400px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,rgba(0,0,0,0.2));  
+    -webkit-box-reflect: below 10px linear-gradient(transparent,transparent,rgba(0, 0, 0, 0.377));  
+    border-radius: 1.2rem;
+    background-color: aliceblue;
+    display: grid;
+    place-items: center;
 }
 .box span img{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 95%;
+    border-radius: 1rem;
 }
