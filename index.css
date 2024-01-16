@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'superCool-Custom';
+    src: url('./fonts/SuperCool-MVg1p.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'superCool-Custom', sans-serif;
+}
+.gradient-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    text-stroke: 1px rgb(255, 255, 255);
+    font-size: 5rem;
+    font-weight: bold;
+    -webkit-box-reflect: below -10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+    text-shadow: 10px 10px 100px rgb(49, 117, 129);
+}
+body{
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+.box{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    transform-style:preserve-3d;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform:perspective(1000px)rotateY(0deg);
+    }
+    100%{
+        transform:perspective(1000px)rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i)*45deg))translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,rgba(0,0,0,0.2));  
+}
+.box span img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
