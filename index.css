@@ -38,7 +38,7 @@ body{
     height: 300px;
     width: 300px;
     transform-style:preserve-3d;
-    animation: animate 20s linear infinite;
+    animation: animate 50s linear infinite;
 }
 @keyframes animate {
     0%{
@@ -60,6 +60,7 @@ body{
     border-radius: 1.2rem;
     background-color: aliceblue;
     display: grid;
+    overflow: hidden;
     place-items: center;
     transition: 2s;
 }
@@ -68,8 +69,9 @@ body{
     height: 95%;
     width: 95%;
     border-radius: 1rem;
+    transition: .5s;
     
 }
-.box span:hover{
-    scale: 1.5;
+.box img:hover{
+    scale: 1.2;
 }
